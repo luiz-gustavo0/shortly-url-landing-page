@@ -24,6 +24,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 html,
@@ -48,14 +49,14 @@ a {
 img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .header-container {
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  padding: 2rem 1.25rem;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +132,7 @@ img {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem 1.25rem;
+  padding: 5rem 0;
   display: flex;
   gap: 2rem;
   height: 100%;
@@ -177,6 +178,65 @@ img {
 .info-container img {
   position: absolute;
   max-width: 50%;
-  top: 0;
-  right: 0;
+  top: 1rem;
+  right: -5rem;
+}
+
+.container-form {
+  max-width: 1100px;
+  margin: auto;
+  background: url('../images/bg-shorten-desktop.svg') no-repeat;
+  background-size: cover;
+  background-color: var(--dark-violet);
+  margin: 8rem auto 0;
+  border-radius: 0.5rem;
+}
+
+.container-form form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 4rem 6rem;
+}
+
+.form-group {
+  width: 85%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-group span {
+  display: none;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  color: var(--red);
+}
+
+.container-form button {
+  width: 15%;
+  padding: 1.4rem 0;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  background: var(--cyan);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.container-form button:hover,
+.container-form button:focus {
+  filter: opacity(0.7);
+}
+
+.section-statistics {
+  background: var(--gray);
 }
