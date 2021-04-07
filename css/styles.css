@@ -34,6 +34,7 @@ body {
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
+  color: var(--very-dark-violet);
 }
 
 ul {
@@ -47,10 +48,11 @@ a {
 img {
   display: block;
   width: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 .header-container {
+  width: 100%;
   max-width: 1100px;
   margin: auto;
   padding: 2rem 1.25rem;
@@ -119,4 +121,62 @@ img {
 .header-content-buttons button:hover,
 .header-content-buttons button:focus {
   filter: opacity(0.5);
+}
+
+.section-info {
+  position: relative;
+}
+
+.info-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  padding: 2rem 0;
+}
+
+.info-title {
+  font-size: 6rem;
+  line-height: 1.1;
+  font-size: 500;
+  margin-bottom: 1rem;
+}
+
+.info-content p {
+  color: var(--grayish-violet);
+  margin-bottom: 3rem;
+}
+
+.info-content button {
+  background: var(--cyan);
+  border: none;
+  max-width: 200px;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.info-content button:hover,
+.info-content button:focus {
+  filter: opacity(0.5);
+}
+
+.info-container img {
+  position: absolute;
+  max-width: 50%;
+  top: 0;
+  right: 0;
 }
