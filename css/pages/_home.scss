@@ -1,1 +1,38 @@
+.hero {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  position: relative;
+  height: 50rem;
 
+  &__text-box {
+    width: 40%;
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 5.4rem;
+      color: $color-dark-violet;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__box-img {
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: -17%;
+    height: 45rem;
+    align-self: flex-end;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
