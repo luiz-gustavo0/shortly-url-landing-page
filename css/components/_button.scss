@@ -28,3 +28,23 @@
     padding: 1rem 3.5rem;
   }
 }
+
+.btn-sqaure {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  border-color: $color-cyan;
+  background-color: $color-cyan;
+  color: $color-white;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    filter: opacity(0.8);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+  }
+}
