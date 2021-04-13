@@ -1,0 +1,42 @@
+.header {
+  min-height: 5rem;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+
+  &__menu-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    margin-left: 4rem;
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__menu-link:link,
+  &__menu-link:visited {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem;
+    color: $color-grayish-violet;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-dark-violet;
+    }
+  }
+
+  &__box-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

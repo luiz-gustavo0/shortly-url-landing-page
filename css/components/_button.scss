@@ -1,0 +1,30 @@
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    display: inline-block;
+    border-radius: 5rem;
+    background-color: $color-cyan;
+    color: $color-white;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    filter: opacity(0.5);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+  }
+
+  &--sm {
+    padding: 0.5rem 2rem;
+  }
+
+  &--lg {
+    padding: 0.5rem 3.5rem;
+  }
+}
