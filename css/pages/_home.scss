@@ -165,3 +165,20 @@
     gap: 2rem;
   }
 }
+
+.boost {
+  background: $color-dark-violet url('../images/bg-boost-desktop.svg') no-repeat
+    center center;
+  background-color: $color-dark-violet;
+  padding: 4rem 0;
+
+  &__box-text {
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      color: $color-white;
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -406,4 +406,20 @@ body {
           justify-content: space-between;
   gap: 2rem;
 }
+
+.boost {
+  background: #3b3054 url("../images/bg-boost-desktop.svg") no-repeat center center;
+  background-color: #3b3054;
+  padding: 4rem 0;
+}
+
+.boost__box-text {
+  text-align: center;
+}
+
+.boost__box-text h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
 /*# sourceMappingURL=style.css.map */
