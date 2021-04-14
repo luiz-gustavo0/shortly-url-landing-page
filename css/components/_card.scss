@@ -1,0 +1,53 @@
+.card {
+  background-color: $color-white;
+  font-size: 1.4rem;
+  width: 32%;
+  height: 100%;
+  padding: 6rem 3.5rem 3rem;
+  border-radius: 0.4rem;
+  position: relative;
+
+  &__box-img {
+    background-color: $color-dark-violet;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    position: absolute;
+    top: -3.5rem;
+  }
+
+  &__text {
+    h3 {
+      font-size: 1.8rem;
+      color: $color-dark-violet;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4rem;
+    height: 0.5rem;
+    background-color: $color-cyan;
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+  }
+
+  &--2 {
+    margin-top: 4rem;
+  }
+
+  &--3 {
+    margin-top: 8rem;
+
+    &::before {
+      display: none;
+    }
+  }
+}

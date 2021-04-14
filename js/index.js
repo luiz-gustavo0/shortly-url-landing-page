@@ -3,13 +3,9 @@ const button = document.querySelector('.btn-sqaure');
 const span = document.querySelector('.form-box__span--error');
 const containerLinks = document.querySelector('.container-links');
 
-console.log(containerLinks);
-
-console.log(button);
-console.log(span);
-
 const handleSubmit = (event) => {
-  let inputValue = event.target[0].value;
+  const inputValue = event.target[0].value;
+  form.reset();
   button.disabled = true;
 
   event.preventDefault();
@@ -22,21 +18,23 @@ const handleSubmit = (event) => {
       return res.json();
     })
     .then((json) => {
-      containerLinks.innerHTML = `
+      containerLinks.innerHTML += `
       <div class="box-link">
         <div class="box-link__item">
-          <a href=${inputValue}> ${inputValue}</a>
+          <a href=${inputValue} target="_blank"> ${inputValue}</a>
         </div>
         <div class="box-link__group">
-          <a href=${json.result.full_short_link} data-js="short-link">${json.result.full_short_link}</a>
-        <button>Copy</button>
+          <a href=${json.result.full_short_link} target="_blank" id='short-link'>
+            ${json.result.full_short_link}
+          </a>
+        <button id="copy">Copy</button>
         </div>
       </div>
       `;
     })
     .catch((err) => {
       span.style.display = 'inline-block';
-      console.log(err.messgae);
+      console.log(err);
     });
 };
 

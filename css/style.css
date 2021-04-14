@@ -86,6 +86,64 @@ body {
   cursor: wait;
 }
 
+.card {
+  background-color: #fff;
+  font-size: 1.4rem;
+  width: 32%;
+  height: 100%;
+  padding: 6rem 3.5rem 3rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.card__box-img {
+  background-color: #3b3054;
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5rem;
+  position: absolute;
+  top: -3.5rem;
+}
+
+.card__text h3 {
+  font-size: 1.8rem;
+  color: #3b3054;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.card::before {
+  content: '';
+  display: inline-block;
+  width: 4rem;
+  height: 0.5rem;
+  background-color: #2acfcf;
+  position: absolute;
+  top: 50%;
+  right: -4rem;
+}
+
+.card--2 {
+  margin-top: 4rem;
+}
+
+.card--3 {
+  margin-top: 8rem;
+}
+
+.card--3::before {
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 110rem;
@@ -100,9 +158,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .header {
@@ -324,11 +379,12 @@ body {
 
 .statistics {
   background-color: #eff0f5;
-  padding: 3rem 0;
+  padding: 3rem 0 8rem;
 }
 
 .statistics-box {
-  margin: 0 auto;
+  width: 41%;
+  margin: 0 auto 8rem;
   text-align: center;
 }
 
@@ -339,5 +395,15 @@ body {
 
 .statistics-box__paragraph {
   font-size: 1.5rem;
+}
+
+.statistics .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
