@@ -47,4 +47,10 @@
   &:active {
     transform: translateY(-0.1rem);
   }
+
+  &:disabled {
+    background-color: $color-gray;
+    border-color: $color-gray;
+    cursor: wait;
+  }
 }

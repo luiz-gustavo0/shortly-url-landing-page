@@ -74,19 +74,35 @@
 
       <section class="section-form">
         <div class="container">
-          <form class="form-box">
+          <form class="form-box" id="form">
             <div class="form-box__group">
-              <input type="url" placeholder="Shorten a link here..." />
-              <button class="btn-sqaure">Shorten It!</button>
+              <input
+                type="url"
+                id="url"
+                name="url"
+                placeholder="Shorten a link here..."
+              />
+              <button type="submit" class="btn-sqaure">Shorten It!</button>
             </div>
             <span class="form-box__span form-box__span--error">
               Please add a link
             </span>
           </form>
+          <div class="container-links">
+            <!-- <div class="box-link">
+              <div class="box-link__item">
+                <a href="#" data-js="url-link"></a>
+              </div>
+              <div class="box-link__group">
+                <a href="#" data-js="short-link"></a>
+                <button>Copy</button>
+              </div>
+            </div> -->
+          </div>
 
           <!-- <div class="box-link">
           <div class="box-link__item">
-            <a href="#">http://google.com</a>
+            <a data-js="url-link href="#">http://google.com</a>
           </div>
           <div class="box-link__group">
             <a href="#" data-js="short-link">http://google.com</a>
@@ -183,5 +199,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

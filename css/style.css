@@ -80,12 +80,17 @@ body {
           transform: translateY(-0.1rem);
 }
 
+.btn-sqaure:disabled {
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+  cursor: wait;
+}
+
 .container {
   width: 100%;
   max-width: 110rem;
   margin: 0 auto;
   padding: 0 2.5rem;
-  background-color: orange;
 }
 
 .container--flex {
