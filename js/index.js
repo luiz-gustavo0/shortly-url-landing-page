@@ -33,8 +33,10 @@ const handleSubmit = (event) => {
       `;
     })
     .catch((err) => {
+      button.disabled = false;
       span.style.display = 'inline-block';
       console.log(err);
+      return err;
     });
 };
 

@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+
+    &__box-buttons.active {
+      display: flex;
+    }
+
+    &__box-buttons {
+      display: none;
+    }
+
+    .btn-mobile {
+      display: block;
+    }
+  }
+}

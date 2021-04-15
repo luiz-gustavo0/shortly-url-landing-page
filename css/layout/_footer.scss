@@ -1,0 +1,51 @@
+.footer {
+  background-color: $color-very-dark-violet;
+  padding: 6rem 0;
+
+  &-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__logo {
+      background-color: $color-white;
+      height: 3.5rem;
+    }
+
+    &__navigation {
+      display: flex;
+      font-size: 1.4rem;
+      gap: 6rem;
+
+      ul {
+        list-style: none;
+        color: $color-white;
+
+        li {
+          a {
+            display: inline-block;
+            color: $color-gray;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $color-cyan;
+            }
+          }
+        }
+
+        li:first-child {
+          font-size: 1.6rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &__social-link {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}

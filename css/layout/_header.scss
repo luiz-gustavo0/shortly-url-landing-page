@@ -3,40 +3,55 @@
   padding: 2rem 0;
   font-size: 1.6rem;
 
-  &__menu-box {
+  &__logo {
+    margin-right: 4rem;
+  }
+
+  & .navigation {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  &__menu {
-    margin-left: 4rem;
-  }
+    &__menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
 
-  & ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
+      &-item a:link,
+      &-item a:visited {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.5rem;
+        color: $color-grayish-violet;
+        font-weight: 700;
+        transition: 0.3s ease-in-out;
 
-  &__menu-link:link,
-  &__menu-link:visited {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5rem;
-    color: $color-grayish-violet;
-    font-weight: 700;
-    transition: 0.3s ease-in-out;
-
-    &:hover {
-      color: $color-dark-violet;
+        &:hover {
+          color: $color-dark-violet;
+        }
+      }
     }
-  }
 
-  &__box-buttons {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      &-item:link,
+      &-item:visited {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.5rem;
+        color: $color-grayish-violet;
+        font-weight: 700;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-dark-violet;
+        }
+      }
+    }
   }
 }

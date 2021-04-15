@@ -170,7 +170,7 @@
   background: $color-dark-violet url('../images/bg-boost-desktop.svg') no-repeat
     center center;
   background-color: $color-dark-violet;
-  padding: 4rem 0;
+  padding: 6rem 0;
 
   &__box-text {
     text-align: center;
@@ -180,5 +180,15 @@
       color: $color-white;
       margin-bottom: 3rem;
     }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: $color-very-dark-violet;
+
+  a {
+    color: $color-gray;
   }
 }
