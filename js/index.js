@@ -3,6 +3,19 @@ const button = document.querySelector('.btn-sqaure');
 const span = document.querySelector('.form-box__span--error');
 const containerLinks = document.querySelector('.container-links');
 
+const menu = document.querySelector('.navigation');
+const btnMobile = document.querySelector('.btn-mobile');
+
+console.log(menu, btnMobile);
+
+btnMobile.addEventListener('click', handleClick);
+
+function handleClick() {
+  btnMobile.classList.toggle('active');
+  console.log('clicou');
+  menu.classList.toggle('active');
+}
+
 const handleSubmit = (event) => {
   const inputValue = event.target[0].value;
   form.reset();

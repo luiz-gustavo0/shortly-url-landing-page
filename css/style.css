@@ -167,6 +167,14 @@ body {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .container--flex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .header {
   min-height: 5rem;
   padding: 2rem 0;
@@ -303,16 +311,71 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header__menu {
+  .header .navigation {
     display: none;
   }
-  .header__box-buttons.active {
+  .header .navigation.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    z-index: 20;
   }
-  .header__box-buttons {
-    display: none;
+  .header .navigation.active nav {
+    width: 100%;
+    background-color: #3b3054;
+    padding: 4rem 4rem 2rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .header .navigation.active .navigation__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .header .navigation.active .navigation__menu-item a:link,
+  .header .navigation.active .navigation__menu-item a:visited {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  .header .navigation.active .navigation__menu:last-child {
+    border-bottom: 1px solid #bfbfbf;
+  }
+  .header .navigation.active .navigation__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: #3b3054;
+    padding: 0 4rem 4rem;
+  }
+  .header .navigation.active .navigation__buttons-item:link, .header .navigation.active .navigation__buttons-item:visited {
+    color: #fff;
+    font-weight: 700;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .header .navigation.active .navigation__buttons .btn-xl {
+    padding: 1rem;
+    width: 100%;
   }
   .header .btn-mobile {
     display: block;

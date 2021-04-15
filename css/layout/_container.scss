@@ -10,3 +10,9 @@
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .container--flex {
+    justify-content: space-between;
+  }
+}
