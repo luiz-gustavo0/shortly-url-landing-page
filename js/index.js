@@ -6,13 +6,10 @@ const containerLinks = document.querySelector('.container-links');
 const menu = document.querySelector('.navigation');
 const btnMobile = document.querySelector('.btn-mobile');
 
-console.log(menu, btnMobile);
-
 btnMobile.addEventListener('click', handleClick);
 
 function handleClick() {
   btnMobile.classList.toggle('active');
-  console.log('clicou');
   menu.classList.toggle('active');
 }
 
