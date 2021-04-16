@@ -7,9 +7,19 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
     &__logo {
-      background-color: $color-white;
       height: 3.5rem;
+
+      svg path {
+        fill: $color-white;
+      }
     }
 
     &__navigation {
@@ -17,11 +27,22 @@
       font-size: 1.4rem;
       gap: 6rem;
 
+      @include sm {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+      }
+
       ul {
         list-style: none;
         color: $color-white;
 
         li {
+          @include sm {
+            text-align: center;
+          }
+
           a {
             display: inline-block;
             color: $color-gray;
@@ -46,6 +67,14 @@
     &__social-link {
       display: flex;
       gap: 2rem;
+
+      a svg path {
+        transition: all 0.3s;
+      }
+
+      a:hover svg path {
+        fill: $color-cyan;
+      }
     }
   }
 }

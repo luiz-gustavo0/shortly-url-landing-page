@@ -7,6 +7,14 @@
   border-radius: 0.4rem;
   position: relative;
 
+  @include md {
+    width: 60%;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+
   &__box-img {
     background-color: $color-dark-violet;
     width: 7rem;
@@ -37,6 +45,20 @@
     position: absolute;
     top: 50%;
     right: -4rem;
+
+    @include md {
+      top: -4rem;
+      left: 5rem;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--1 {
+    &::before {
+      @include md {
+        display: none;
+      }
+    }
   }
 
   &--2 {
@@ -46,8 +68,16 @@
   &--3 {
     margin-top: 8rem;
 
+    @include md {
+      margin-top: 4rem;
+    }
+
     &::before {
       display: none;
+
+      @include md {
+        display: block;
+      }
     }
   }
 }

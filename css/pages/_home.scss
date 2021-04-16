@@ -2,20 +2,47 @@
   display: flex;
   align-items: center;
   font-size: 1.6rem;
-  position: relative;
-  height: 60rem;
-  z-index: 1;
-  // padding: 6rem 2rem 10rem;
+  gap: 2rem;
+  padding: 4rem 2.5rem;
+  margin-bottom: 5rem;
+
+  @include md {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+  }
 
   &__text-box {
-    width: 40%;
+    max-width: 40%;
     padding: 3rem 0;
+
+    @include md {
+      text-align: center;
+      max-width: 70%;
+      padding: 3rem 2rem;
+    }
+
+    @include sm {
+      max-width: 100%;
+    }
 
     h1 {
       font-size: 5.4rem;
       color: $color-very-dark-violet;
       line-height: 1.2;
       margin-bottom: 1rem;
+
+      @include lg {
+        font-size: 4rem;
+      }
+
+      @include md {
+        font-size: 4rem;
+      }
+
+      @include sm {
+        font-size: 2.8rem;
+      }
     }
 
     p {
@@ -24,24 +51,27 @@
   }
 
   &__box-img {
-    width: 60%;
-    position: absolute;
-    top: 3rem;
-    right: -17%;
-    height: 45rem;
-    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+
+    width: 100%;
   }
 
   img {
-    width: 100%;
-    // object-fit: cover;
-    // object-position: bottom;
+    position: relative;
+    width: 130%;
+    right: -10%;
   }
 }
 
 .section-form {
   background-color: $color-gray-light;
   padding: 2rem;
+
+  .container {
+    padding: 0 0.4rem;
+  }
 
   .form-box {
     background: $color-dark-violet url('../images/bg-shorten-desktop.svg')
@@ -53,11 +83,21 @@
     position: relative;
     z-index: 10;
 
+    @include md {
+      padding: 3.5rem 2.5rem 2rem;
+    }
+
     &__group {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 2rem;
       margin-bottom: 0.5rem;
+      position: relative;
+
+      @include md {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
 
       input {
         width: 85%;
@@ -66,6 +106,10 @@
         border-radius: 0.4rem;
         border: 2px solid $color-white;
 
+        @include md {
+          width: 100%;
+        }
+
         &:invalid {
           border-color: $color-red;
         }
@@ -73,7 +117,7 @@
     }
 
     &__span {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: red;
 
       &--error {
@@ -91,8 +135,20 @@
     margin-bottom: 2rem;
     font-size: 1.6rem;
 
+    @include md {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     &__item {
       width: 60%;
+
+      @include md {
+        padding: 0.4rem 0;
+        border-bottom: 2px solid $color-gray-light;
+
+        width: 100%;
+      }
 
       a {
         color: $color-dark-violet;
@@ -107,12 +163,23 @@
       align-items: center;
       justify-content: flex-end;
 
+      @include md {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
       a {
         display: inline-block;
         margin-right: 2rem;
         color: $color-cyan;
         text-decoration: none;
         font-weight: 500;
+
+        @include md {
+          width: 100%;
+          margin-right: 0;
+        }
       }
 
       button {
@@ -124,6 +191,11 @@
         font-size: 1.5rem;
         cursor: pointer;
         outline: none;
+
+        @include md {
+          width: 100%;
+          padding: 1rem 2rem;
+        }
 
         &:hover {
           filter: opacity(0.5);
@@ -149,9 +221,18 @@
     margin: 0 auto 8rem;
     text-align: center;
 
+    @include md {
+      width: 100%;
+    }
+
     &__heading {
       font-size: 3rem;
       color: $color-very-dark-violet;
+      margin-bottom: 1rem;
+
+      @include sm {
+        font-size: 2.2rem;
+      }
     }
 
     &__paragraph {
@@ -163,6 +244,12 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
@@ -179,6 +266,10 @@
       font-size: 3rem;
       color: $color-white;
       margin-bottom: 3rem;
+
+      @include sm {
+        font-size: 2.2rem;
+      }
     }
   }
 }

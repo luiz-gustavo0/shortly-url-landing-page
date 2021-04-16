@@ -30,6 +30,8 @@
 }
 
 .btn-sqaure {
+  // width: 100%;
+  width: 20%;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   border-radius: 0.4rem;
@@ -38,6 +40,10 @@
   color: $color-white;
   outline: none;
   cursor: pointer;
+
+  @include md {
+    width: 100%;
+  }
 
   &:hover {
     transform: translateY(-0.2rem);
@@ -59,4 +65,8 @@
   background: none;
   border: none;
   display: none;
+
+  @include md {
+    display: block;
+  }
 }
