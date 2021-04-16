@@ -14,13 +14,13 @@
 ### Clonar o repositório
 
 ```
-$ git clone git@github.com:luiz-gustavo0/easybank-landing-page.git
+$ git clone git@github.com:luiz-gustavo0/shortly-url-landing-page.git
 ```
 
 ### Entrar no diretorio
 
 ```
-cd easybank-landing-page
+cd shortly-url-landing-page
 ```
 
 ## Author
